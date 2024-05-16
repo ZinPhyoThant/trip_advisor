@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+  
+{% block body %}
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Manage Tour</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Manage Tours</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+ 
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+            <h3>Tour Edit</h3>
+            <form method="post" id="tourForm" action="{{ url_for('save_tour')}}">
+                <div class="card-body">               
+                                        
+                        <div class="form-group">                          
+                            <label for="tour" class="control-label">Name</label>                            
+                            <input type="text" name="name" id="name" autocomplete="off" class="form-control" placeholder="tour name" value="{{tours.name}}"/>                             
+                        </div>                    
+                        <div class="form-group">                          
+                            <label for="tour" class="control-label">Description</label>                         
+                            <input type="text" name="description" id="description" autocomplete="off" class="form-control" placeholder="Description" value="{{tours.description}}"/>                                        
+                        </div>
+                        <div class="form-group">                          
+                          <label for="tour" class="control-label">Price</label>                         
+                          <input type="text" name="price" id="price" autocomplete="off" class="form-control" placeholder="Price" value="{{tours.price}}"/>                                        
+                      </div>       
+                        <div class="form-group">                          
+                            <label for="tour" class="control-label">Picture</label>   
+                            <img src="static/images/{{tours.picture}}" width="200"/>                   
+                        </div>
+<!--                          
+                        <input type="hidden" name="id" id="id" value="{{tours.id}}" />                                    
+                        <input type="hidden" name="action" id="action" value="updateTour" />
+                        <input type="submit" name="save" id="save" class="btn btn-info" value="Save" />                     -->
+                </div>
+            </form>
+            </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+{% endblock %}
