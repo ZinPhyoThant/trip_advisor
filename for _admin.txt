@@ -1,0 +1,2 @@
+admin@gmail.com  // for mail
+admin123!@#  // for password
