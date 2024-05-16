@@ -35,7 +35,6 @@ pure-eval==0.2.2
 Pygments==2.18.0
 PyMySQL==1.1.0
 python-dateutil==2.9.0.post0
-pywin32==306
 pyzmq==26.0.3
 six==1.16.0
 SQLAlchemy==2.0.29
